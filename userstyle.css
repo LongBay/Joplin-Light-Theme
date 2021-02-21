@@ -1,0 +1,24 @@
+/* For styling the rendered Markdown */
+
+body {
+	background-color: #F0ECDE;
+	color: #383734;
+	font-size: 16px;
+	font-family: "SF Pro";
+}
+
+h1 {
+	color: #0055aa;
+	border-bottom: none;
+	padding: 0px;
+}
+
+h2 {
+	color: #0055aa;
+	border-bottom: 1px solid #0055aa;
+	margin-top: 2em;
+}
+
+th {
+	display: none;
+}

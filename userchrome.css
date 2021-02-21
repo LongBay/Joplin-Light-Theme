@@ -1,0 +1,609 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+
+:root {
+	--color-main-text: #383734;
+	--color-main-background: #F0ECDE;
+	--color-main-background-translucent: rgba(255, 255, 255, 1);
+	--color-background-hover: #fcf7f5;
+	--color-background-dark: #E0DDD1;
+	--color-background-darker: #dbdbdb;
+	--color-placeholder-light: #e6e6e6;
+	--color-placeholder-dark: #ccc;
+	--color-primary: #3b4854;
+	--color-primary-light: #F0ECDE;
+	--color-primary-text: #F0ECDE;
+	--color-primary-text-dark: #E0DDD1;
+	--color-primary-element: #3b4854;
+	--color-primary-element-light: #5b6f81;
+	--color-error: #e9322d;
+	--color-warning: #eca700;
+	--color-success: #46ba61;
+	--color-text-maxcontrast: #767676;
+	--color-text-light: #383734;
+	--color-text-lighter: #767676;
+	--color-loading-light: #ccc;
+	--color-loading-dark: #444;
+	--color-box-shadow: rgba(77, 77, 77, 0.5);
+	--color-border: #E0DDD1;
+	--color-border-dark: #dbdbdb;
+	--border-radius: 5px;
+	--border-radius-large: 10px;
+	--border-radius-pill: 100px;
+	--font-face: "SF Pro", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+		Cantarell, Ubuntu, "Helvetica Neue", Arial, "Noto Color Emoji",
+		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--default-font-size: 13px;
+	--font-size: 13px;
+	--default-line-height: 1.8em;
+	--animation-quick: 100ms;
+	--animation-slow: 300ms;
+	--header-height: 50px;
+	--element-height: 35px;
+}
+
+html,
+body {
+	background-color: var(--color-main-background);
+	font-weight: normal;
+	font-size: var(--default-font-size);
+	line-height: var(--default-line-height);
+	font-family: var(--font-face);
+	color: var(--color-main-text);
+}
+
+a {
+	font-family: var(--font-face) !important;
+}
+
+/**************************************************************************************************
+*  SIDEBAR
+*************************************************************************************************/
+/* Hide All Notes 
+.folders:first-child {
+display: none !important;
+}
+.hAzLGs,.gvPZcU,.bNOfCT  { 
+display: none !important;
+} */
+
+.sidebar {
+	border-top: 1px solid #C3C0B7;
+	padding-top:20px;
+	background-color: var(--color-background-dark) !important;
+	border-right: 0px solid var(--color-border);
+	color: var(--color-main-text) !important;
+}
+
+.rli-sidebar {
+	border-right: 1px solid var(--color-border);
+}
+
+.sidebar .folders .list-item,
+.sidebar div,
+.sidebar span {
+	color: var(--white) !important;
+	font-size: var(--font-size) !important;
+	margin-bottom: var(--base-size-1);
+	opacity: 1;
+}
+
+.sidebar div div {
+	font-size: var(--font-size) !important;
+	/*  line-height: 40px !important;
+min-height: 40px;*/
+}
+
+/* making icons the same width so text aligns */
+.sidebar .fas:first-of-type {
+	width: var(--base-size-18);
+	color: var(--color-main-text) !important;
+}
+
+.list-item div {
+	margin-left: auto !important;
+	padding-right: var(--base-size-13) !important;
+}
+
+.sidebar span:hover {
+	/* header */
+	/*background-color: red !important;*/
+}
+
+.side-bar div {
+	font-size: 12px !important;
+}
+
+a.list-item {
+	font-size: 12px !important;
+}
+
+.folders .list-item-container {
+	font-size: var(--font-size) !important;
+	line-height: var(--element-height) !important;
+	min-height: var(--element-height);
+	background-color: var(--color-background-dark);
+}
+
+.sidebar [class^="icon-"],
+.sidebar [class*=" icon-"] {
+	color: var(--color-main-text) !important;
+}
+
+.eRzPp,
+.xOaMI {
+	background: var(--color-primary-light) !important;
+}
+.sidebar .list-item-container.eRzPp:hover {
+	background: var(--color-primary-light) !important;
+}
+
+.sidebar .list-item-container:hover {
+	background-color: var(--color-background-hover) !important;
+}
+.sidebar .list-item-container:hover * {
+	background-color: var(--color-background-hover) !important;
+}
+
+/* folders */
+.folders > div:first-of-type > a {
+	text-transform: uppercase !important;
+	color: var(--color-main-text);
+}
+
+.sidebar,
+.sidebar div,
+.sidebar div a {
+	color: var(--color-main-text) !important;
+}
+
+.sidebar div {
+	/* line-height: 40px !important;
+min-height: 40px;*/
+}
+
+a.list-item:hover {
+	background-color: var(--color-background-hover) !important;
+}
+
+.sidebar .folders .list-item div {
+	/*Number on the right */
+	margin-right: 12px;
+	color: var(--color-main-text) !important;
+	opacity: 0.8 !important;
+}
+
+/**************************************************************************************************
+*  Tags 
+*************************************************************************************************/
+
+/* global tag style */
+.css-19qsih1-multiValue,
+.tags a.list-item,
+.tag-list span {
+	background-color: var(--color-background-hover) !important;
+	border-radius: var(--border-radius) !important;
+	color: var(--default-font-size) !important;
+	flex: 0 !important;
+	font-weight: normal !important;
+	padding: 0px 6px !important;
+	min-height: 0px !important;
+	line-height: 0px !important;
+}
+.tags {
+	margin-left: 10px;
+}
+.tags .list-item-container {
+	height: auto !important;
+	margin-bottom: 2px;
+	height: auto !important;
+	margin-bottom: 2px;
+	display: inline-block;
+	background: var(--color-background-hover) !important;
+	padding: 0 !important;
+	margin: 0 5px;
+	border-radius: 5px;
+	margin: 5px 5px;
+	min-height: 0px !important;
+}
+
+.tags .list-item-container:hover {
+	background: var(--color-background-dark) !important;
+}
+
+.tags .list-item-container i {
+	display: none !important;
+}
+.tags .list-item-container a div {
+	font-size: 10px !important;
+	line-height: 25px !important;
+	min-height: 0px !important;
+}
+/* Add or remove tag */
+.css-15g31wo,
+.css-1n5lu3i,
+.css-d0yvbe {
+	border-radius: var(--tag-radius) !important;
+	color: var(--tag-font-color) !important;
+	line-height: 20px;
+}
+
+/**************************************************************************************************
+*  Sync Button
+*************************************************************************************************/
+
+/* synchronize area */
+.sidebar > div:last-of-type {
+	background-color: var(--overlay-dark2) !important;
+	text-align: center !important;
+}
+
+/* synchronize button */
+.sidebar > div:last-of-type > button {
+	border: 1px solid #706e6d !important;
+	border-radius: var(--border-radius);
+	background-color: var(--color-background-hover) !important;
+	color: var(--color-primary);
+}
+.sidebar > div:last-of-type > button:hover {
+	background-color: var(--color-background-dark) !important;
+}
+.sidebar > div:last-of-type > button span {
+	color: var(--overlay-light5) !important;
+	text-transform: uppercase !important;
+}
+
+/**************************************************************************************************
+*  Note List
+*************************************************************************************************/
+
+.note-list > div > a:focus,
+.note-list a.list-item:focus {
+	background-color: var(--color-primary-light) !important;
+}
+
+.note-list {
+	background-color: var(--color-background-dark) !important;
+	width: 100% !important;
+	opacity: 1;
+}
+
+.note-list .list-item-container {
+	padding: 10px;
+	border-radius: 0px !important;
+	height: var(--element-height);
+}
+
+.note-list .list-item-container div:before {
+	border: none !important;
+}
+
+.note-list .list-item-container:hover,
+.folders .list-item-container:hover {
+	border: none !important;
+	background: var(--color-background-hover);
+}
+
+.note-list .list-item-container {
+	border: none !important;
+	z-index: 1;
+	padding: 0px;
+	height: var(--element-height);
+	position: relative;
+	background-color: var(--color-main-background);
+	font-size: var(--default-font-size) !important;
+	color: var(--color-main-text) !important;
+	box-shadow: 0 0 2px var(--color-box-shadow);
+	text-shadow: unset;
+}
+
+.item-list.note-list .list-item-container:nth-child(2) {
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+.item-list.note-list .list-item-container:nth-last-child(2) {
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+.item-list.note-list .list-item-container:before {
+	border: none !important;
+}
+
+.note-list .list-item-container * {
+	background: transparent !important;
+	font-size: var(--font-size) !important;
+}
+
+.note-list .list-item-container div {
+	background-color: transparent !important;
+}
+
+.note-list input[type="checkbox"] {
+	opacity: 1 !important;
+	padding: 7px 6px;
+	font-size: var(--font-size) !important;
+	background-color: var(--color-main-background);
+	color: var(--color-main-text);
+	border: 2px solid transparent;
+	outline: none;
+	border-radius: var(--border-radius);
+	margin: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	outline: none;
+	width: 0;
+	height: 0;
+	box-shadow: none;
+	font-size: 2em;
+	opacity: 0.1;
+	/* display: none; */
+	outline: 0px solid transparent;
+	width: 20px !important;
+	height: 20px !important;
+	margin-right: 0 !important;
+}
+
+.note-list input[type="checkbox"i]:before {
+	content: "";
+	display: inline-block;
+	vertical-align: bottom;
+	width: 14px;
+	height: 14px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: var(--border-radius);
+	border-color: var(--color-border-dark);
+	position: absolute;
+	top: 11px;
+	left: 11px;
+
+	top: calc(
+		var(--element-height) / 2 - 14px + 4px
+	); /* 14 = width, 4px = 2 x border-width*/
+	left: calc(var(--element-height) / 2 - 14px + 4px);
+}
+
+.note-list input[type="checkbox"]:checked:before {
+	content: "✓";
+	color: var(--color-main-text);
+	text-align: center;
+	border-color: var(--color-primary-light);
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 14px;
+	color: var(--color-main-text);
+}
+
+.note-list a.list-item span,
+.tags .list-item {
+	/* font-family: "IBM Plex Mono" !important; */
+	/* font-size: 12px !important; */
+	color: var(--light-grey) !important;
+}
+
+/**************************************************************************************************
+*  Search
+*************************************************************************************************/
+
+/* global search */
+div[height="50"] {
+	background: var(--color-background-dark) !important;
+	padding: 10px;
+	border-right: 1px solid var(--color-border);
+}
+
+div[height="50"] input {
+	border: medium none !important;
+	box-sizing: border-box;
+	color: var(--color-main-text);
+	cursor: text;
+	font-size: 100%;
+	margin: 0;
+	padding: 0 15px;
+	width: 100%;
+	min-height: var(--element-height);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	outline: none;
+	border-radius: var(--border-radius);
+	background-color: var(--color-main-background);
+	box-shadow: 0 0 2px var(--color-box-shadow);
+	text-shadow: unset;
+}
+
+/* icon search */
+.rli-noteList > div span[class$="icon-search"] {
+	color: var(--icons) !important;
+	min-height: var(--element-height);
+	margin: 0 !important;
+	margin-right: 5px !important;
+	opacity: 0.5;
+	height: var(--element-height);
+	display: none;
+}
+div[height="50"] button {
+	background: transparent !important;
+	color: var(--color-main-text) !important;
+	padding: 20px 0;
+	opacity: 0.8;
+	border-radius: 50px;
+	height: 20px;
+	width: 20px;
+	padding: 0;
+	margin-top: 7px;
+}
+div[height="50"] button:hover {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+div[height="50"] button span {
+	color: var(--color-main-text) !important;
+	font-weight: bold !important;
+}
+
+/**************************************************************************************************
+*  PANELS
+*************************************************************************************************/
+
+/* general panel styles */
+.rli-root > .resizableLayoutItem > div {
+	min-width: 150px !important;
+	width: 100% !important;
+}
+.rli-root > .resizableLayoutItem > .resizableLayoutItem > div {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+/* remove border from plugin iframes */
+div.resizableLayoutItem iframe {
+	border-bottom: none !important;
+}
+
+/* highlight splitters (vertical and horizontal) while dragging */
+.resizableLayoutItem > span > div {
+	z-index: 100 !important;
+	transition: 0.5s;
+}
+.resizableLayoutItem > span > div:hover,
+.resizableLayoutItem > span > div:active {
+	background: var(--primary);
+	opacity: var(--opacity-0-5);
+}
+
+.gkjdjq {
+	border-right: 0px solid transparent !important;
+	background-color: var(--color-background-dark) !important;
+}
+
+/* scrollbars */
+::-webkit-scrollbar-thumb {
+	display: none;
+	/* background-color: var(--color-border-dark) !important;
+border-radius: var(--scroll-radius) !important;
+scrollbar-color: var(--color-border-dark) transparent;
+scrollbar-width: thin; */
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+	display: none;
+	/* background-color: transparent !important; */
+}
+
+/**************************************************************************************************
+*  ADDITIONAL
+*************************************************************************************************/
+
+.bNOfCT {
+	display: none !important;
+}
+
+.editor-toolbar *, .editor-toolbar span, .codeMirrorEditor, .kYItFT * {
+	color: #383734 !important;
+}
+
+.rli-root,
+.editor-toolbar,
+.kYItFT > input,
+.codeMirrorEditor {
+	background-color: #F0ECDE !important;
+}
+
+.cm-s-default .cm-header {
+	color: #0055aa;
+}
+.cm-s-default .cm-quote {
+	color: #090;
+}
+.cm-negative {
+	color: #d44;
+}
+.cm-positive {
+	color: #292;
+}
+.cm-header,
+.cm-strong {
+	font-weight: bold;
+}
+.cm-em {
+	font-style: italic;
+}
+.cm-link {
+	text-decoration: underline;
+}
+.cm-strikethrough {
+	text-decoration: line-through;
+}
+
+.cm-s-default .cm-keyword {
+	color: #708;
+}
+.cm-s-default .cm-atom {
+	color: #219;
+}
+.cm-s-default .cm-number {
+	color: #164;
+}
+.cm-s-default .cm-def {
+	color: #0055aa;
+}
+.cm-s-default .cm-variable,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-property,
+.cm-s-default .cm-operator {
+}
+.cm-s-default .cm-variable-2 {
+	color: #383734 !important;
+}
+.cm-s-default .cm-variable-3,
+.cm-s-default .cm-type {
+	color: #085;
+}
+.cm-s-default .cm-comment {
+	color: #a50;
+}
+.cm-s-default .cm-string {
+	color: #a11;
+}
+.cm-s-default .cm-string-2 {
+	color: #f50;
+}
+.cm-s-default .cm-meta {
+	color: #555;
+}
+.cm-s-default .cm-qualifier {
+	color: #555;
+}
+.cm-s-default .cm-builtin {
+	color: #30a;
+}
+.cm-s-default .cm-bracket {
+	color: #997;
+}
+.cm-s-default .cm-tag {
+	color: #170;
+}
+.cm-s-default .cm-attribute {
+	color: #00c;
+}
+.cm-s-default .cm-hr {
+	color: #999;
+}
+.cm-s-default .cm-link {
+	color: #00c;
+}
+
+/* Table */
+.CodeMirror-gutters {
+	border-right: 10px solid #B0ADA4 !important;
+	background-color: #E0DDD1 !important;
+	white-space: nowrap;
+  }

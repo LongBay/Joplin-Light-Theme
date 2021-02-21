@@ -513,6 +513,14 @@ scrollbar-width: thin; */
 	color: #383734 !important;
 }
 
+.gCTJhE > div > div > div > div > div > .editor-toolbar {
+	display: none !important;
+}
+
+.codeMirrorEditor .CodeMirror-wrap {
+	padding:0px 30px;
+}
+
 .rli-root,
 .editor-toolbar,
 .kYItFT > input,

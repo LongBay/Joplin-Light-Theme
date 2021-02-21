@@ -1,6 +1,7 @@
 /* For styling the rendered Markdown */
 
 body {
+	padding:0px 30px;
 	background-color: #F0ECDE;
 	color: #383734;
 	font-size: 16px;

@@ -264,13 +264,16 @@ a.list-item:hover {
 .note-list {
 	background-color: var(--color-background-dark) !important;
 	width: 100% !important;
+	padding-top:10px;
 	opacity: 1;
 }
 
 .note-list .list-item-container {
 	padding: 10px;
 	border-radius: 0px !important;
+	box-shadow: none !important;
 	height: var(--element-height);
+	background-color: transparent !important;
 }
 
 .note-list .list-item-container div:before {
@@ -280,7 +283,7 @@ a.list-item:hover {
 .note-list .list-item-container:hover,
 .folders .list-item-container:hover {
 	border: none !important;
-	background: var(--color-background-hover);
+	background: var(--color-background-hover) !important;
 }
 
 .note-list .list-item-container {

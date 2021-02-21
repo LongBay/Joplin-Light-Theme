@@ -1,5 +1,5 @@
 # Joplin-LightUI-Theme
-A light UI theme for Joplin
+
 
 A light UI theme for those find it dazzling looking at white background.
 

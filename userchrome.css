@@ -1,39 +1,39 @@
 /* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
 
 :root {
-	--color-main-text: #383734;
-	--color-main-background: #F0ECDE;
+	--color-main-text: #383836;
+	--color-main-background: #EAE8E4;
 	--color-main-background-translucent: rgba(255, 255, 255, 1);
-	--color-background-hover: #fcf7f5;
-	--color-background-dark: #E0DDD1;
+	--color-background-hover: #D4CABE;
+	--color-background-dark: #E0DEDA;
 	--color-background-darker: #dbdbdb;
 	--color-placeholder-light: #e6e6e6;
 	--color-placeholder-dark: #ccc;
 	--color-primary: #3b4854;
-	--color-primary-light: #F0ECDE;
-	--color-primary-text: #F0ECDE;
-	--color-primary-text-dark: #E0DDD1;
+	--color-primary-light: #EAE8E4;
+	--color-primary-text: #EAE8E4;
+	--color-primary-text-dark: #E0DEDA;
 	--color-primary-element: #3b4854;
 	--color-primary-element-light: #5b6f81;
 	--color-error: #e9322d;
 	--color-warning: #eca700;
 	--color-success: #46ba61;
 	--color-text-maxcontrast: #767676;
-	--color-text-light: #383734;
+	--color-text-light: #524937;
 	--color-text-lighter: #767676;
 	--color-loading-light: #ccc;
 	--color-loading-dark: #444;
 	--color-box-shadow: rgba(77, 77, 77, 0.5);
-	--color-border: #E0DDD1;
-	--color-border-dark: #dbdbdb;
+	--color-border: #cbcbcb;
+	--color-border-dark: #B8B6B2;
 	--border-radius: 5px;
 	--border-radius-large: 10px;
 	--border-radius-pill: 100px;
 	--font-face: "SF Pro", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
 		Cantarell, Ubuntu, "Helvetica Neue", Arial, "Noto Color Emoji",
 		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--default-font-size: 13px;
-	--font-size: 13px;
+	--default-font-size: 14px;
+	--font-size: 14px;
 	--default-line-height: 1.8em;
 	--animation-quick: 100ms;
 	--animation-slow: 300ms;
@@ -69,19 +69,15 @@ display: none !important;
 .sidebar {
 	border-top: 1px solid #C3C0B7;
 	padding-top:20px;
-	background-color: var(--color-background-dark) !important;
-	border-right: 0px solid var(--color-border);
-	color: var(--color-main-text) !important;
-}
-
-.rli-sidebar {
+	background-color: transparent !important;
 	border-right: 1px solid var(--color-border);
+	color: var(--color-main-text) !important;
 }
 
 .sidebar .folders .list-item,
 .sidebar div,
 .sidebar span {
-	color: var(--white) !important;
+	color: var(--color-main-text) !important;
 	font-size: var(--font-size) !important;
 	margin-bottom: var(--base-size-1);
 	opacity: 1;
@@ -121,7 +117,7 @@ a.list-item {
 	font-size: var(--font-size) !important;
 	line-height: var(--element-height) !important;
 	min-height: var(--element-height);
-	background-color: var(--color-background-dark);
+	background-color: transparent;
 }
 
 .sidebar [class^="icon-"],
@@ -177,54 +173,43 @@ a.list-item:hover {
 *************************************************************************************************/
 
 /* global tag style */
-.css-19qsih1-multiValue,
-.tags a.list-item,
-.tag-list span {
-	background-color: var(--color-background-hover) !important;
-	border-radius: var(--border-radius) !important;
-	color: var(--default-font-size) !important;
-	flex: 0 !important;
-	font-weight: normal !important;
-	padding: 0px 6px !important;
-	min-height: 0px !important;
-	line-height: 0px !important;
-}
-.tags {
-	margin-left: 10px;
-}
 .tags .list-item-container {
 	height: auto !important;
-	margin-bottom: 2px;
-	height: auto !important;
-	margin-bottom: 2px;
+	width: 100% !important;
 	display: inline-block;
-	background: var(--color-background-hover) !important;
 	padding: 0 !important;
-	margin: 0 5px;
-	border-radius: 5px;
-	margin: 5px 5px;
-	min-height: 0px !important;
+}
+
+.tags .list-item-container a {
+	background-color: transparent !important;
+	padding: 0px !important;
+	font-size: var(--font-size) !important;
+	margin-right: 12px !important;
+	margin-left: 28px !important;
+	color: var(--color-main-text) !important;
+	opacity: 1 !important;
+	line-height: var(--element-height) !important;
+}
+
+.tags .list-item-container a:hover {
+	background-color: transparent !important;
 }
 
 .tags .list-item-container:hover {
-	background: var(--color-background-dark) !important;
+	background: var(--color-background-hover) !important;
 }
 
 .tags .list-item-container i {
 	display: none !important;
 }
-.tags .list-item-container a div {
-	font-size: 10px !important;
-	line-height: 25px !important;
-	min-height: 0px !important;
-}
-/* Add or remove tag */
-.css-15g31wo,
-.css-1n5lu3i,
-.css-d0yvbe {
-	border-radius: var(--tag-radius) !important;
-	color: var(--tag-font-color) !important;
-	line-height: 20px;
+
+.tag-list > span {
+	color: var(--color-main-text) !important;
+	border-radius: var(--border-radius) !important;
+	border: 1px solid var(--color-border-dark) !important;
+	background-color: transparent !important;
+	line-height: 2 !important;
+	padding:0px 10px !important;
 }
 
 /**************************************************************************************************
@@ -239,10 +224,9 @@ a.list-item:hover {
 
 /* synchronize button */
 .sidebar > div:last-of-type > button {
-	border: 1px solid #706e6d !important;
+	border: 1px solid var(--color-border) !important;
 	border-radius: var(--border-radius);
-	background-color: var(--color-background-hover) !important;
-	color: var(--color-primary);
+	color: var(--color-main-text) ;
 }
 .sidebar > div:last-of-type > button:hover {
 	background-color: var(--color-background-dark) !important;
@@ -393,11 +377,18 @@ a.list-item:hover {
 *  Search
 *************************************************************************************************/
 
+.rli-noteList .gkjdjq {
+	border:0 !important;
+}
+
+.rli-noteList .eUfLED {
+	width: 100%;
+}
+
 /* global search */
 div[height="50"] {
 	background: var(--color-background-dark) !important;
 	padding: 10px;
-	border-right: 1px solid var(--color-border);
 }
 
 div[height="50"] input {
@@ -481,11 +472,6 @@ div.resizableLayoutItem iframe {
 	opacity: var(--opacity-0-5);
 }
 
-.gkjdjq {
-	border-right: 0px solid transparent !important;
-	background-color: var(--color-background-dark) !important;
-}
-
 /* scrollbars */
 ::-webkit-scrollbar-thumb {
 	display: none;
@@ -510,11 +496,23 @@ scrollbar-width: thin; */
 }
 
 .editor-toolbar *, .editor-toolbar span, .codeMirrorEditor, .kYItFT * {
-	color: #383734 !important;
+	color: var(--color-main-text) !important;
 }
 
 .gCTJhE > div > div > div > div > div > .editor-toolbar {
 	display: none !important;
+}
+
+.rli-editor .kYItFT {
+	padding:10px 30px;
+}
+
+.rli-editor .kYItFT input {
+	font-size: 1.8em !important;
+}
+
+.codeMirrorEditor {
+	color: var(--color-text-light) !important;
 }
 
 .codeMirrorEditor .CodeMirror-wrap {
@@ -525,11 +523,11 @@ scrollbar-width: thin; */
 .editor-toolbar,
 .kYItFT > input,
 .codeMirrorEditor {
-	background-color: #F0ECDE !important;
+	background-color: #EAE8E4 !important;
 }
 
 .cm-s-default .cm-header {
-	color: #0055aa;
+	color: #004080;
 }
 .cm-s-default .cm-quote {
 	color: #090;
@@ -564,7 +562,7 @@ scrollbar-width: thin; */
 	color: #164;
 }
 .cm-s-default .cm-def {
-	color: #0055aa;
+	color: #004080;
 }
 .cm-s-default .cm-variable,
 .cm-s-default .cm-punctuation,
@@ -572,7 +570,7 @@ scrollbar-width: thin; */
 .cm-s-default .cm-operator {
 }
 .cm-s-default .cm-variable-2 {
-	color: #383734 !important;
+	color: #524937 !important;
 }
 .cm-s-default .cm-variable-3,
 .cm-s-default .cm-type {
@@ -611,10 +609,3 @@ scrollbar-width: thin; */
 .cm-s-default .cm-link {
 	color: #00c;
 }
-
-/* Table */
-.CodeMirror-gutters {
-	border-right: 10px solid #B0ADA4 !important;
-	background-color: #E0DDD1 !important;
-	white-space: nowrap;
-  }

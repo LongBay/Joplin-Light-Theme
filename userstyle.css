@@ -2,21 +2,22 @@
 
 body {
 	padding:0px 30px;
-	background-color: #F0ECDE;
-	color: #383734;
+	background-color: #EAE8E4;
+	color: #524937;
 	font-size: 16px;
 	font-family: "SF Pro";
 }
 
 h1 {
-	color: #0055aa;
+	color: #004080;
 	border-bottom: none;
 	padding: 0px;
+	font-size: 2em;
 }
 
 h2 {
-	color: #0055aa;
-	border-bottom: 1px solid #0055aa;
+	color: #0A96C2;
+	border-bottom: 1px solid #0A96C2;
 	margin-top: 2em;
 }
 

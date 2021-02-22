@@ -1,7 +1,7 @@
 # Joplin-Light-Theme
 
 
-This light theme is for those find it dazzling looking at white background. It is best used under default three column layout, but you can also adjust the border for other layout. 
+This light theme is for those find it dazzling looking at white background. It is intended for the default three column layout, but you can also adjust the border for other layouts. 
 
 The code is quite messy at the moment, but posted here in case if everyone is interested.
 

@@ -1,9 +1,9 @@
 # Joplin-Light-Theme
 
 
-A light theme for those find it dazzling looking at white background.
+This light theme is for those find it dazzling looking at white background. It is best used under default three column layout, but you can also adjust the border for other layout. 
 
-This theme is far from completed yet, but posted here in case if everyone is interested.
+The code is quite messy at the moment, but posted here in case if everyone is interested.
 
 This theme is modified from [Joplin Clear UI theme](https://github.com/marcteys/joplin-theme-clearUI) by [Marc Teyssier](https://github.com/marcteys).
 

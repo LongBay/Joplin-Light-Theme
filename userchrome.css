@@ -49,6 +49,7 @@ body {
 	line-height: var(--default-line-height);
 	font-family: var(--font-face);
 	color: var(--color-main-text);
+	word-wrap: break-all !important;
 }
 
 a {
@@ -128,7 +129,7 @@ a.list-item {
 }
 
 .sidebar .xOaMI::before,
-.note-list .list-item-container a:focus-within::before {
+.note-list .bZonfx a::before {
     position: relative;
     /* top: 3pt; lower the icons as  required*/
     content: "";
@@ -189,21 +190,19 @@ a.list-item:hover {
 
 /* global tag style */
 .tags .list-item-container {
+	padding-left:12px !important;
 	height: auto !important;
-	width: 100% !important;
-	display: inline-block;
-	padding: 0 !important;
 }
 
-.tags .list-item-container a {
+.tags .list-item-container .list-item {
 	background-color: transparent !important;
 	padding: 0px !important;
 	font-size: var(--font-size) !important;
 	margin-right: 12px !important;
-	margin-left: 28px !important;
 	color: var(--color-main-text) !important;
 	opacity: 1 !important;
 	line-height: var(--element-height) !important;
+	width: 100% !important;
 }
 
 .tags .list-item-container i {

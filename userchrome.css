@@ -377,8 +377,17 @@ a.list-item:hover {
 *  Search
 *************************************************************************************************/
 
+.rli-noteList {
+	background-color: var(--color-background-dark);
+}
+
 .rli-noteList .gkjdjq {
 	border:0 !important;
+	background-color: transparent !important;
+}
+
+.rli-noteList .gkjdjq > div {
+	background-color: transparent !important;
 }
 
 .rli-noteList .eUfLED {
@@ -499,7 +508,11 @@ scrollbar-width: thin; */
 	color: var(--color-main-text) !important;
 }
 
-.gCTJhE > div > div > div > div > div > .editor-toolbar {
+.rli-editor .gCTJhE > div {
+	background-color: transparent !important;
+}
+
+.rli-editor .gCTJhE > div > div > div > div > div > .editor-toolbar {
 	display: none !important;
 }
 

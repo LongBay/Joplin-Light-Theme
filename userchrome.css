@@ -69,7 +69,6 @@ display: none !important;
 .sidebar {
 	padding-top:5px;
 	background-color: transparent !important;
-	border-right: 1px solid var(--color-border);
 	color: var(--color-main-text) !important;
 }
 
@@ -125,13 +124,35 @@ a.list-item {
 }
 
 .sidebar .xOaMI {
-	border-top: 1px solid var(--color-border);
-	border-bottom: 1px solid var(--color-border);
-	background: transparent !important;
+	background-color: transparent !important;
 }
 
-.sidebar .list-item-container:hover {
-	background-color: var(--color-background-hover) !important;
+.sidebar .xOaMI::before,
+.note-list .list-item-container a:focus-within::before {
+    position: relative;
+    /* top: 3pt; lower the icons as  required*/
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.2em solid var(--color-main-text);
+    border-top: 0.2em solid var(--color-main-text);
+    transform: rotate(45deg);
+	margin-right:-0.6em;
+}
+
+.sidebar .list-item-container:hover,
+.note-list .list-item-container:hover,
+.folders .list-item-container:hover {
+	border-top: 1px solid var(--color-border) !important;
+	border-bottom: 1px solid var(--color-border) !important;
+	background-color: transparent !important;
+}
+
+.folders .list-item-container a:hover,
+.tags .list-item-container a:hover {
+	background-color: transparent !important;
 }
 
 /* folders */
@@ -185,14 +206,6 @@ a.list-item:hover {
 	line-height: var(--element-height) !important;
 }
 
-.tags .list-item-container a:hover {
-	background-color: transparent !important;
-}
-
-.tags .list-item-container:hover {
-	background: var(--color-background-hover) !important;
-}
-
 .tags .list-item-container i {
 	display: none !important;
 }
@@ -222,9 +235,11 @@ a.list-item:hover {
 	border-radius: var(--border-radius);
 	color: var(--color-main-text) ;
 }
+
 .sidebar > div:last-of-type > button:hover {
 	background-color: var(--color-background-dark) !important;
 }
+
 .sidebar > div:last-of-type > button span {
 	color: var(--overlay-light5) !important;
 	text-transform: uppercase !important;
@@ -234,9 +249,9 @@ a.list-item:hover {
 *  Note List
 *************************************************************************************************/
 
-.note-list > div > a:focus,
-.note-list a.list-item:focus {
-	background-color: var(--color-primary-light) !important;
+.note-list > div > a:hover {
+	border-top: 1px solid var(--color-border);
+	border-bottom: 1px solid var(--color-border);
 }
 
 .note-list {
@@ -251,31 +266,18 @@ a.list-item:hover {
 	border-radius: 0px !important;
 	box-shadow: none !important;
 	height: var(--element-height);
-	background-color: transparent !important;
-}
-
-.note-list .list-item-container div:before {
-	border: none !important;
-}
-
-.note-list .list-item-container:hover,
-.folders .list-item-container:hover {
-	border: none !important;
-	background: var(--color-background-hover) !important;
-}
-
-.note-list .list-item-container {
 	border: none !important;
 	z-index: 1;
 	padding: 0px;
 	height: var(--element-height);
 	position: relative;
-	background-color: var(--color-main-background);
+	background-color: transparent;
 	font-size: var(--default-font-size) !important;
 	color: var(--color-main-text) !important;
 	box-shadow: 0 0 2px var(--color-box-shadow);
 	text-shadow: unset;
 }
+
 
 .item-list.note-list .list-item-container:nth-child(2) {
 	border-top-left-radius: var(--border-radius);
@@ -296,6 +298,11 @@ a.list-item:hover {
 .note-list .list-item-container * {
 	background: transparent !important;
 	font-size: var(--font-size) !important;
+}
+
+
+.note-list .list-item-container span {
+	margin-left: 1.2em !important;
 }
 
 .note-list .list-item-container div {

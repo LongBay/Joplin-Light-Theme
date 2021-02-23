@@ -129,7 +129,7 @@ a.list-item {
 }
 
 .sidebar .xOaMI::before,
-.note-list .bZonfx a::before {
+.note-list .list-item-container a:focus::before {
     position: relative;
     /* top: 3pt; lower the icons as  required*/
     content: "";

@@ -25,7 +25,7 @@
 	--color-loading-dark: #444;
 	--color-box-shadow: rgba(77, 77, 77, 0.5);
 	--color-border: #cbcbcb;
-	--color-border-dark: #B8B6B2;
+	--color-border-dark: #BEA4D2;
 	--border-radius: 5px;
 	--border-radius-large: 10px;
 	--border-radius-pill: 100px;
@@ -49,8 +49,11 @@ body {
 	line-height: var(--default-line-height);
 	font-family: var(--font-face);
 	color: var(--color-main-text);
-	word-wrap: break-word !important;
 }
+
+div {
+}
+
 
 a {
 	font-family: var(--font-face) !important;
@@ -66,6 +69,10 @@ display: none !important;
 .hAzLGs,.gvPZcU,.bNOfCT  { 
 display: none !important;
 } */
+
+.rli-sideBar {
+	min-width: 250px !important;
+}
 
 .sidebar {
 	padding-top:5px;
@@ -128,27 +135,17 @@ a.list-item {
 	background-color: transparent !important;
 }
 
-.sidebar .xOaMI::before,
-.note-list .list-item-container a:focus::before {
-    position: relative;
-    /* top: 3pt; lower the icons as  required*/
-    content: "";
-    display: inline-block;
-    /* By using an em scale, the arrows will size with the font */
-    width: 0.4em;
-    height: 0.4em;
-    border-right: 0.2em solid var(--color-main-text);
-    border-top: 0.2em solid var(--color-main-text);
-    transform: rotate(45deg);
-	margin-right:-0.6em;
+.sidebar .xOaMI,
+.sidebar .eRzPp,
+.note-list .list-item-container a:focus {
+    background-color: var(--color-background-darker) !important;
+	border-left: 6px solid var(--color-border-dark) !important;
 }
 
 .sidebar .list-item-container:hover,
 .note-list .list-item-container:hover,
 .folders .list-item-container:hover {
-	border-top: 1px solid var(--color-border) !important;
-	border-bottom: 1px solid var(--color-border) !important;
-	background-color: rgba(255,255,255,0.2) !important;
+	background-color: rgba(0,0,0,0.1) !important;
 }
 
 .folders .list-item-container a:hover,
@@ -379,6 +376,7 @@ a.list-item:hover {
 
 .rli-noteList {
 	background-color: var(--color-background-dark);
+	min-width: 250px !important;
 }
 
 .rli-noteList .gkjdjq {

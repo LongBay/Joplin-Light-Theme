@@ -1,0 +1,565 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+
+:root {
+	--color-main-text: #383836;
+	--color-main-background: #F8FAF6;
+	--color-main-background-translucent: rgba(255, 255, 255, 1);
+	--color-background-hover: #D4CABE;
+	--color-background-dark: #EDF0EB;
+	--color-background-darker: #dbdbdb;
+	--color-placeholder-light: #e6e6e6;
+	--color-placeholder-dark: #ccc;
+	--color-primary: #3b4854;
+	--color-primary-light: #F8FAF6;
+	--color-primary-text: #F8FAF6;
+	--color-primary-text-dark: #EDF0EB;
+	--color-primary-element: #3b4854;
+	--color-primary-element-light: #5b6f81;
+	--color-error: #e9322d;
+	--color-warning: #eca700;
+	--color-success: #46ba61;
+	--color-text-maxcontrast: #767676;
+	--color-text-light: #524937;
+	--color-text-lighter: #767676;
+	--color-loading-light: #ccc;
+	--color-loading-dark: #444;
+	--color-box-shadow: rgba(77, 77, 77, 0.5);
+	--color-border: #cbcbcb;
+	--color-border-dark: #BEA4D2;
+	--border-radius: 5px;
+	--border-radius-large: 10px;
+	--border-radius-pill: 100px;
+	--font-face: "SF Pro", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+		Cantarell, Ubuntu, "Helvetica Neue", Arial, "Noto Color Emoji",
+		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--default-font-size: 14px;
+	--font-size: 14px;
+	--default-line-height: 1.8em;
+	--animation-quick: 100ms;
+	--animation-slow: 300ms;
+	--header-height: 50px;
+	--element-height: 35px;
+}
+
+html,
+body {
+	background-color: var(--color-main-background);
+	font-weight: normal;
+	font-size: var(--default-font-size);
+	line-height: var(--default-line-height);
+	font-family: var(--font-face);
+	color: var(--color-main-text);
+}
+
+div {
+}
+
+
+a {
+	font-family: var(--font-face) !important;
+}
+
+/**************************************************************************************************
+*  SIDEBAR
+*************************************************************************************************/
+/* Hide All Notes 
+.folders:first-child {
+display: none !important;
+}
+.hAzLGs,.gvPZcU,.bNOfCT  { 
+display: none !important;
+} */
+
+.rli-sideBar {
+	min-width: 250px !important;
+}
+
+.sidebar {
+	padding-top:5px;
+	background-color: transparent !important;
+	color: var(--color-main-text) !important;
+}
+
+.sidebar .folders .list-item,
+.sidebar div,
+.sidebar span {
+	color: var(--color-main-text) !important;
+	font-size: var(--font-size) !important;
+	margin-bottom: var(--base-size-1);
+	opacity: 1;
+}
+
+.sidebar div div {
+	font-size: var(--font-size) !important;
+	/*  line-height: 40px !important;
+min-height: 40px;*/
+}
+
+/* making icons the same width so text aligns */
+.sidebar .fas:first-of-type {
+	width: var(--base-size-18);
+	color: var(--color-main-text) !important;
+}
+
+.list-item div {
+	margin-left: auto !important;
+	padding-right: var(--base-size-13) !important;
+}
+
+.sidebar span:hover {
+	/* header */
+	/*background-color: red !important;*/
+}
+
+.side-bar div {
+	font-size: 12px !important;
+}
+
+a.list-item {
+	font-size: 12px !important;
+}
+
+.folders .list-item-container {
+	font-size: var(--font-size) !important;
+	line-height: var(--element-height) !important;
+	min-height: var(--element-height);
+	background-color: transparent;
+}
+
+.sidebar [class^="icon-"],
+.sidebar [class*=" icon-"] {
+	color: var(--color-main-text) !important;
+}
+
+.sidebar .xOaMI {
+	background-color: transparent !important;
+}
+
+.sidebar .xOaMI,
+.sidebar .eRzPp,
+.note-list .list-item-container a:focus {
+    background-color: var(--color-background-darker) !important;
+	border-left: 6px solid var(--color-border-dark) !important;
+}
+
+.sidebar .list-item-container:hover,
+.note-list .list-item-container:hover,
+.folders .list-item-container:hover {
+	background-color: rgba(0,0,0,0.1) !important;
+}
+
+.folders .list-item-container a:hover,
+.tags .list-item-container a:hover {
+	background-color: transparent !important;
+}
+
+/* folders */
+.folders > div:first-of-type > a {
+	text-transform: uppercase !important;
+	color: var(--color-main-text);
+}
+
+.sidebar,
+.sidebar div,
+.sidebar div a {
+	color: var(--color-main-text) !important;
+}
+
+.sidebar div {
+	/* line-height: 40px !important;
+min-height: 40px;*/
+}
+
+a.list-item:hover {
+	background-color: var(--color-background-hover) !important;
+}
+
+.sidebar .folders .list-item div {
+	/*Number on the right */
+	margin-right: 12px;
+	color: var(--color-main-text) !important;
+	opacity: 0.8 !important;
+}
+
+/**************************************************************************************************
+*  Tags 
+*************************************************************************************************/
+
+/* global tag style */
+.tags .list-item-container {
+	padding-left:12px !important;
+	height: auto !important;
+}
+
+.tags .list-item-container .list-item {
+	background-color: transparent !important;
+	padding: 0px !important;
+	font-size: var(--font-size) !important;
+	margin-right: 12px !important;
+	color: var(--color-main-text) !important;
+	opacity: 1 !important;
+	line-height: var(--element-height) !important;
+	width: 100% !important;
+}
+
+.tags .list-item-container i {
+	display: none !important;
+}
+
+.tag-list > span {
+	color: var(--color-main-text) !important;
+	border-radius: var(--border-radius) !important;
+	border: 1px solid var(--color-border-dark) !important;
+	background-color: transparent !important;
+	line-height: 2 !important;
+	padding:0px 10px !important;
+}
+
+/**************************************************************************************************
+*  Sync Button
+*************************************************************************************************/
+
+/* synchronize area */
+.sidebar > div:last-of-type {
+	background-color: var(--overlay-dark2) !important;
+	text-align: center !important;
+}
+
+/* synchronize button */
+.sidebar > div:last-of-type > button {
+	border: 1px solid var(--color-border) !important;
+	border-radius: var(--border-radius);
+	color: var(--color-main-text) ;
+}
+
+.sidebar > div:last-of-type > button:hover {
+	background-color: var(--color-background-dark) !important;
+}
+
+.sidebar > div:last-of-type > button span {
+	color: var(--overlay-light5) !important;
+	text-transform: uppercase !important;
+}
+
+/**************************************************************************************************
+*  Note List
+*************************************************************************************************/
+
+.note-list > div > a:hover {
+	border-top: 1px solid var(--color-border);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.note-list {
+	background-color: var(--color-background-dark) !important;
+	width: 100% !important;
+	padding-top:10px;
+	opacity: 1;
+}
+
+.note-list .list-item-container {
+	padding: 10px;
+	border-radius: 0px !important;
+	box-shadow: none !important;
+	height: var(--element-height);
+	border: none !important;
+	z-index: 1;
+	padding: 0px;
+	height: var(--element-height);
+	position: relative;
+	background-color: transparent;
+	font-size: var(--default-font-size) !important;
+	color: var(--color-main-text) !important;
+	box-shadow: 0 0 2px var(--color-box-shadow);
+	text-shadow: unset;
+}
+
+
+.item-list.note-list .list-item-container:nth-child(2) {
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+.item-list.note-list .list-item-container:nth-last-child(2) {
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+.item-list.note-list .list-item-container:before {
+	border: none !important;
+}
+
+.note-list .list-item-container * {
+	background: transparent !important;
+	font-size: var(--font-size) !important;
+}
+
+
+.note-list .list-item-container span {
+	margin-left: 1.2em !important;
+}
+
+.note-list .list-item-container div {
+	background-color: transparent !important;
+}
+
+.note-list input[type="checkbox"] {
+	opacity: 1 !important;
+	padding: 7px 6px;
+	font-size: var(--font-size) !important;
+	background-color: var(--color-main-background);
+	color: var(--color-main-text);
+	border: 2px solid transparent;
+	outline: none;
+	border-radius: var(--border-radius);
+	margin: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	outline: none;
+	width: 0;
+	height: 0;
+	box-shadow: none;
+	font-size: 2em;
+	opacity: 0.1;
+	/* display: none; */
+	outline: 0px solid transparent;
+	width: 20px !important;
+	height: 20px !important;
+	margin-right: 0 !important;
+}
+
+.note-list input[type="checkbox"i]:before {
+	content: "";
+	display: inline-block;
+	vertical-align: bottom;
+	width: 14px;
+	height: 14px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: var(--border-radius);
+	border-color: var(--color-border-dark);
+	position: absolute;
+	top: 11px;
+	left: 11px;
+
+	top: calc(
+		var(--element-height) / 2 - 14px + 4px
+	); /* 14 = width, 4px = 2 x border-width*/
+	left: calc(var(--element-height) / 2 - 14px + 4px);
+}
+
+.note-list input[type="checkbox"]:checked:before {
+	content: "✓";
+	color: var(--color-main-text);
+	text-align: center;
+	border-color: var(--color-primary-light);
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 14px;
+	color: var(--color-main-text);
+}
+
+.note-list a.list-item span,
+.tags .list-item {
+	/* font-family: "IBM Plex Mono" !important; */
+	/* font-size: 12px !important; */
+	color: var(--light-grey) !important;
+}
+
+/**************************************************************************************************
+*  Search
+*************************************************************************************************/
+
+.rli-noteList {
+	background-color: var(--color-background-dark);
+	min-width: 250px !important;
+}
+
+.rli-noteList .gkjdjq {
+	border:0 !important;
+	background-color: transparent !important;
+}
+
+.rli-noteList .gkjdjq > div {
+	background-color: transparent !important;
+}
+
+.rli-noteList .eUfLED {
+	width: 100%;
+}
+
+/* global search */
+div[height="50"] {
+	background: var(--color-background-dark) !important;
+	padding: 10px;
+}
+
+div[height="50"] input {
+	border: medium none !important;
+	box-sizing: border-box;
+	color: var(--color-main-text);
+	cursor: text;
+	font-size: 100%;
+	margin: 0;
+	padding: 0 15px;
+	width: 100%;
+	min-height: var(--element-height);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	outline: none;
+	border-radius: var(--border-radius);
+	background-color: var(--color-main-background);
+	box-shadow: 0 0 2px var(--color-box-shadow);
+	text-shadow: unset;
+}
+
+/* icon search */
+.rli-noteList > div span[class$="icon-search"] {
+	color: var(--icons) !important;
+	min-height: var(--element-height);
+	margin: 0 !important;
+	margin-right: 5px !important;
+	opacity: 0.5;
+	height: var(--element-height);
+	display: none;
+}
+div[height="50"] button {
+	background: transparent !important;
+	color: var(--color-main-text) !important;
+	padding: 20px 0;
+	opacity: 0.8;
+	border-radius: 50px;
+	height: 20px;
+	width: 20px;
+	padding: 0;
+	margin-top: 7px;
+}
+div[height="50"] button:hover {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+div[height="50"] button span {
+	color: var(--color-main-text) !important;
+	font-weight: bold !important;
+}
+
+/**************************************************************************************************
+*  PANELS
+*************************************************************************************************/
+
+/* general panel styles */
+.rli-root > .resizableLayoutItem > div {
+	min-width: 150px !important;
+	width: 100% !important;
+}
+.rli-root > .resizableLayoutItem > .resizableLayoutItem > div {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+/* remove border from plugin iframes */
+div.resizableLayoutItem iframe {
+	border-bottom: none !important;
+}
+
+/* highlight splitters (vertical and horizontal) while dragging */
+.resizableLayoutItem > span > div {
+	z-index: 100 !important;
+	transition: 0.5s;
+}
+.resizableLayoutItem > span > div:hover,
+.resizableLayoutItem > span > div:active {
+	background: var(--primary);
+	opacity: var(--opacity-0-5);
+}
+
+/* scrollbars */
+::-webkit-scrollbar-thumb {
+	display: none;
+	/* background-color: var(--color-border-dark) !important;
+border-radius: var(--scroll-radius) !important;
+scrollbar-color: var(--color-border-dark) transparent;
+scrollbar-width: thin; */
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+	display: none;
+	/* background-color: transparent !important; */
+}
+
+/**************************************************************************************************
+*  ADDITIONAL
+*************************************************************************************************/
+
+.bNOfCT {
+	display: none !important;
+}
+
+.editor-toolbar *, .editor-toolbar span, .codeMirrorEditor, .kYItFT * {
+	color: var(--color-main-text) !important;
+}
+
+.rli-editor {
+	backdrop-filter:blur(10px);
+}
+
+.rli-editor .gCTJhE > div {
+	background-color: transparent !important;
+}
+
+.tox-tbtn {
+	display: none !important;
+} 
+
+.rli-editor .kYItFT {
+	padding:10px 35px;
+}
+
+.rli-editor .kYItFT input {
+	font-size: 1.8em !important;
+}
+
+.codeMirrorEditor {
+	color: var(--color-text-light) !important;
+}
+
+.codeMirrorEditor .CodeMirror-wrap {
+	padding:15px 35px;
+}
+
+.rli-root,
+.editor-toolbar,
+.kYItFT > input {
+	background-color: var(--color-main-background) !important;
+}
+
+.codeMirrorEditor {
+	background-color: transparent !important;
+}
+
+.cm-s-default .cm-header {
+	color: #004080;
+}
+
+.cm-s-default .cm-def {
+	color: #004080;
+}
+
+.cm-s-default .cm-variable-2 {
+	color: var(--color-text-light) !important;
+}
+
+mark {
+	color:var(--color-main-text) !important;
+}
+
+.cm-search-marker-selected {
+	background-color: var(--color-box-shadow) !important;
+}
